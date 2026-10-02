@@ -1,0 +1,106 @@
+/* ========================================
+   MOBILE FIRST STYLES
+   These are the default styles for phones.
+   The boxes are displayed in one column.
+   ======================================== */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* This is the main container for my page.
+   It keeps my content centered and prevents it
+   from becoming too wide on large screens. */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* This wrapper controls the layout of my boxes.
+   On mobile, flex-direction column stacks
+   all of the boxes on top of each other. */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* These are the individual hobby boxes.
+   The white background and padding make
+   each section easier to read. */
+.box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   TABLET - 600px AND UP
+   The background changes and the boxes
+   change from 1 column to 2 columns.
+   ======================================== */
+
+@media (min-width: 600px) {
+
+    body {
+        background-color: lightblue;
+    }
+
+    /* Row and wrap allow the boxes to sit
+       next to each other instead of stacking.
+       45% width creates about two columns. */
+    .wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box {
+        width: 45%;
+    }
+}
+
+
+/* ========================================
+   DESKTOP - 900px AND UP
+   The background changes again and the
+   layout changes to about 3 columns.
+   ======================================== */
+
+@media (min-width: 900px) {
+
+    body {
+        background-color: lightgreen;
+    }
+
+    /* 28% gives enough room for about
+       three boxes across the screen. */
+    .box {
+        width: 28%;
+    }
+}
+
+
+/* ========================================
+   LARGE DESKTOP - 1200px AND UP
+   The background changes again and all
+   four boxes can fit in one row.
+   ======================================== */
+
+@media (min-width: 1200px) {
+
+    body {
+        background-color: lightpink;
+    }
+
+    /* 20% width allows about four boxes
+       to appear across the screen. */
+    .box {
+        width: 20%;
+    }
+}
